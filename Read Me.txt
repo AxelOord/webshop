@@ -1,0 +1,3 @@
+Dit is mijn Webshop project die ik ontwikkeld heb als eind project voor mijn opleiding.
+De webshop is gemaakt in PHP met het mvc model. ook heb ik Smarty gebruikt als HTML compiler.
+Er is een SQL database bijgevoegd in het geval hij op een host moet worden gedraaid.
