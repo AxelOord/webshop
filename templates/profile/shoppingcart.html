@@ -1,0 +1,109 @@
+<div class="content-container" style="margin-top: 0px;">
+    <div class="tile intro">
+        <div class="intro-text">
+            <div class="shopping-cart">
+                <!-- Title -->
+                <div class="title">
+                    Shopping cart
+                </div>
+                {if $products|@count !== 0}
+                {foreach from=$products item=foo}
+                <div class="item">
+                    <div class="buttons">
+                        <form id="deleteForm{$foo->pk_aankoop}" method="post">
+                            <input type="hidden" name="pk_aankoop" value="{$foo->pk_aankoop}">
+                            <span class="delete-btn" onclick="document.getElementById('deleteForm{$foo->pk_aankoop}').submit();"></span>
+                        </form>
+                    </div>
+
+                    <div class="image">
+                        <img src="../images/{$foo->img}" alt="" />
+                    </div>
+
+                    <div class="description">
+                        <span>{$foo->merk}</span>
+                        <span>{$foo->model}</span>
+                        <span>White</span>
+                    </div>
+
+                    <div class="quantity">
+                        <button class="plus-btn" type="button" name="button">
+                            <img src="../images/plus.svg" alt="" />
+                        </button>
+                        <input type="text" name="name" value="{$foo->aantal}">
+                        <button class="minus-btn" type="button" name="button">
+                            <img src="../images/minus.svg" alt="" />
+                        </button>
+                    </div>
+
+                    <div class="total-price">€ {$foo->prijs},-</div>
+                </div>
+                {/foreach}
+                {else}
+                <p>winkelwagen is leeg!</p>
+                {/if}
+
+
+            </div>
+        </div>
+
+        <div class="profile">
+
+        </div>
+    </div>
+
+    <div class="tile">
+        <div class="intro-text">
+
+        </div>
+    </div>
+
+    <div class="tile three">
+        <div class="intro-text">
+
+        </div>
+    </div>
+
+    <div class="tile four">
+
+    </div>
+</div>
+
+{literal}
+<script type="text/javascript">
+    $('.minus-btn').on('click', function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $input = $this.closest('div').find('input');
+        var value = parseInt($input.val());
+
+        if (value > 2) {
+            value = value - 1;
+        } else {
+            value = 1;
+        }
+
+        $input.val(value);
+
+    });
+
+    $('.plus-btn').on('click', function(e) {
+        e.preventDefault();
+        var $this = $(this);
+        var $input = $this.closest('div').find('input');
+        var value = parseInt($input.val());
+
+        if (value < 100) {
+            value = value + 1;
+        } else {
+            value =100;
+        }
+
+        $input.val(value);
+    });
+
+    $('.like-btn').on('click', function() {
+        $(this).toggleClass('is-active');
+    });
+</script>
+{/literal}

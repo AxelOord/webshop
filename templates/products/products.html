@@ -1,0 +1,92 @@
+<div class="content-container" style="margin-top: 0px;">
+
+    <div class="tile one">
+        <div class="intro-text tile-product">
+            <section class="products">
+                {foreach from=$products|@array_slice:0:10 item=foo}
+                <div class="product-card">
+                    <a href="{$base_url}products/item/{$foo->pk_product}">
+                        {if $foo->discount == 1}
+                        <div class="cr cr-top cr-left cr-sticky cr-red">Sale!</div>
+                        {else}
+                        <div class="cr cr-top cr-left cr-sticky cr-transparant">.</div>
+                        {/if}
+                        <div class="product-image">
+                            <img src="images/{$foo->img}">
+                        </div>
+                        <div class="product-info">
+                            <h5>{$foo->merk}<br />{$foo->model}</h5>
+                            {if $foo->discount == 1}
+                            <h6><span style="text-decoration: line-through;">€ {$foo->prijs},-</span><br />€ {$foo->korting},-</h6>
+                            {else}
+                            <h6>€ {$foo->prijs},-</h6>
+                            {/if}
+                        </div>
+                    </a>
+                </div>
+                {/foreach}
+            </section>
+
+            <section class="products">
+                {foreach from=$highlight item=foo}
+                <div class="product-card">
+                    <a href="{$base_url}products/item/{$foo->pk_product}">
+                        {if $foo->discount == 1}
+                        <div class="cr cr-top cr-left cr-sticky cr-red">Sale!</div>
+                        {else}
+                        <div class="cr cr-top cr-left cr-sticky cr-transparant">.</div>
+                        {/if}
+                        <div class="product-image">
+                            <img class="highlight"src="images/{$foo->img}">
+                        </div>
+                        <div class="product-info">
+                            <h5>{$foo->merk}<br />{$foo->model}</h5>
+                            {if $foo->discount == 1}
+                            <h6><span style="text-decoration: line-through;">€ {$foo->prijs},-</span><br />€ {$foo->korting},-</h6>
+                            {else}
+                            <h6>€ {$foo->prijs},-</h6>
+                            {/if}
+                        </div>
+                    </a>
+                </div>
+                {/foreach}
+            </section>
+
+            <section class="products">
+                {foreach from=$products|@array_slice:10:99 item=foo}
+                <div class="product-card">
+                    <a href="{$base_url}products/item/{$foo->pk_product}">
+                        {if $foo->discount == 1}
+                        <div class="cr cr-top cr-left cr-sticky cr-red">Sale!</div>
+                        {else}
+                        <div class="cr cr-top cr-left cr-sticky cr-transparant">.</div>
+                        {/if}
+                        <div class="product-image">
+                            <img src="images/{$foo->img}">
+                        </div>
+                        <div class="product-info">
+                            <h5>{$foo->merk}<br />{$foo->model}</h5>
+                            {if $foo->discount == 1}
+                            <h6><span style="text-decoration: line-through;">€ {$foo->prijs},-</span><br />€ {$foo->korting},-</h6>
+                            {else}
+                            <h6>€ {$foo->prijs},-</h6>
+                            {/if}
+                        </div>
+                    </a>
+                </div>
+                {/foreach}
+            </section>
+        </div>
+    </div>
+
+</div>
+
+{literal}
+<script type="text/javascript">
+    (function($) {
+        $(document).ready(function(){
+            $('.header-nav--wrapper').fadeIn(500);
+        });
+    })(jQuery);
+</script>
+{/literal}

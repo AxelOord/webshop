@@ -1,0 +1,7 @@
+<div class="admin-page">
+    {foreach from=$products item=foo}
+    <a href="{$base_url}admin/edit/{$foo->pk_product}">{$foo->merk} {$foo->model}</a>
+    <br>
+    <br>
+    {/foreach}
+</div>

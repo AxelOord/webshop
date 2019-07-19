@@ -1,0 +1,50 @@
+<div class="tile intro">
+    <div class="admin-intro-text">
+        <form method="post">
+            <input type="hidden" name="pk_product" value="{$product->pk_product}">
+            <div class="block">
+                <label for="">merk:</label>
+                <input class="edit-input" type="text" name="merk" value="{$product->merk}"><br>
+            </div>
+            <br>
+            <div class="block">
+                <label for="">model:</label>
+                <input class="edit-input" type="text" name="model" value="{$product->model}"><br>
+            </div>
+            <br>
+            <div class="block">
+                <label for="">prijs:</label>
+                <input class="edit-input" type="text" name="prijs" value="{$product->prijs}"><br>
+            </div>
+            <br>
+            <div class="block">
+                <label for="">aantal:</label>
+                <input class="edit-input" type="text" name="aantal" value="{$product->aantal}"><br>
+            </div>
+            <br>
+            <div class="block">
+                <label for="">beschrijving:</label>
+                <input class="edit-input" type="text" name="beschrijving" value="{$product->beschrijving}">
+            </div>
+            <br>
+            <br>
+            <div class="block">
+                <label for="">korting prijs:</label>
+                <input class="edit-input" type="text" name="korting" value="{$product->korting}">
+            </div>
+            <br>
+            <br>
+            <div class="block">
+                <label for="">in de korting:</label>
+                <input type="hidden" name="discount" value="0" />
+                <input class="edit-input" type="checkbox" name="discount" value="1" {if $product->discount == 1}checked{/if}>
+            </div>
+            <br> <br>
+            <input type="submit" name="opslaan" value="opslaan">
+            <input type="submit" name="delete" value="verwijderen">
+        </form>
+        <br>
+    </div>
+    <br>
+</div>
+

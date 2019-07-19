@@ -1,0 +1,910 @@
+<!DOCTYPE HTML><html lang='nl' dir='ltr'><head><meta charset="utf-8" /><meta name="referrer" content="no-referrer" /><meta name="robots" content="noindex,nofollow" /><meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0"><style id="cfs-style">html{display: none;}</style><link rel="icon" href="favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><link rel="stylesheet" type="text/css" href="./themes/pmahomme/jquery/jquery-ui.css" /><link rel="stylesheet" type="text/css" href="js/vendor/codemirror/lib/codemirror.css?v=4.8.4" /><link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/hint/show-hint.css?v=4.8.4" /><link rel="stylesheet" type="text/css" href="js/vendor/codemirror/addon/lint/lint.css?v=4.8.4" /><link rel="stylesheet" type="text/css" href="phpmyadmin.css.php?nocache=6187391477ltr&amp;server=1" /><link rel="stylesheet" type="text/css" href="./themes/pmahomme/css/printview.css?v=4.8.4" media="print" id="printcss"/><title>localhost / MySQL / webshop / t_products | phpMyAdmin 4.8.4</title><script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.min.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery-migrate.js?v=4.8.4"></script>
+<script data-cfasync='false' type='text/javascript' src='js/whitelist.php?v=4.8.4'></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/sprintf.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/ajax.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/keyhandler.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery-ui.min.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/js.cookie.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.mousewheel.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.event.drag-2.2.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.validate.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery-ui-timepicker-addon.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.ba-hashchange-1.3.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.debounce-1.0.5.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/menu-resizer.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/cross_framing_protection.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/rte.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/tracekit.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/error_report.js?v=4.8.4"></script>
+<script data-cfasync='false' type='text/javascript' src='js/messages.php?l=nl&amp;v=4.8.4'></script>
+<script data-cfasync="false" type="text/javascript" src="js/config.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/doclinks.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/functions.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/navigation.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/indexes.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/common.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/page_settings.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/shortcuts_handler.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/jquery/jquery.uitablefilter.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/tbl_change.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/gis_data_editor.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/multi_column_sort.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/makegrid.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/sql.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/lib/codemirror.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/mode/sql/sql.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/addon/runmode/runmode.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/addon/hint/show-hint.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/addon/hint/sql-hint.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/vendor/codemirror/addon/lint/lint.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/codemirror/addon/lint/sql-lint.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript" src="js/console.js?v=4.8.4"></script>
+<script data-cfasync="false" type="text/javascript">// <![CDATA[
+PMA_commonParams.setAll({common_query:"",opendb_url:"db_structure.php",lang:"nl",server:"1",table:"t_products",db:"webshop",token:"uF\")b;<3dmfRY.@g",text_dir:"ltr",show_databases_navigation_as_tree:true,pma_text_default_tab:"Verkennen",pma_text_left_default_tab:"Structuur",pma_text_left_default_tab2:false,LimitChars:"50",pftext:"P",confirm:true,LoginCookieValidity:"1440",session_gc_maxlifetime:"1440",logged_in:true,is_https:false,rootPath:"/phpmyadmin/",arg_separator:"&",PMA_VERSION:"4.8.4",auth_type:"cookie",user:"root"});
+ConsoleEnterExecutes=false
+AJAX.scriptHandler.add("vendor/jquery/jquery.min.js",0).add("vendor/jquery/jquery-migrate.js",0).add("whitelist.php",1).add("vendor/sprintf.js",1).add("ajax.js",0).add("keyhandler.js",1).add("vendor/jquery/jquery-ui.min.js",0).add("vendor/js.cookie.js",1).add("vendor/jquery/jquery.mousewheel.js",0).add("vendor/jquery/jquery.event.drag-2.2.js",0).add("vendor/jquery/jquery.validate.js",0).add("vendor/jquery/jquery-ui-timepicker-addon.js",0).add("vendor/jquery/jquery.ba-hashchange-1.3.js",0).add("vendor/jquery/jquery.debounce-1.0.5.js",0).add("menu-resizer.js",1).add("cross_framing_protection.js",0).add("rte.js",1).add("vendor/tracekit.js",1).add("error_report.js",1).add("messages.php",0).add("config.js",1).add("doclinks.js",1).add("functions.js",1).add("navigation.js",1).add("indexes.js",1).add("common.js",1).add("page_settings.js",1).add("shortcuts_handler.js",1).add("vendor/jquery/jquery.uitablefilter.js",0).add("tbl_change.js",1).add("gis_data_editor.js",1).add("multi_column_sort.js",1).add("makegrid.js",1).add("sql.js",1).add("vendor/codemirror/lib/codemirror.js",0).add("vendor/codemirror/mode/sql/sql.js",0).add("vendor/codemirror/addon/runmode/runmode.js",0).add("vendor/codemirror/addon/hint/show-hint.js",0).add("vendor/codemirror/addon/hint/sql-hint.js",0).add("vendor/codemirror/addon/lint/lint.js",0).add("codemirror/addon/lint/sql-lint.js",0).add("console.js",1);
+$(function() {AJAX.fireOnload("whitelist.php");AJAX.fireOnload("vendor/sprintf.js");AJAX.fireOnload("keyhandler.js");AJAX.fireOnload("vendor/js.cookie.js");AJAX.fireOnload("menu-resizer.js");AJAX.fireOnload("rte.js");AJAX.fireOnload("vendor/tracekit.js");AJAX.fireOnload("error_report.js");AJAX.fireOnload("config.js");AJAX.fireOnload("doclinks.js");AJAX.fireOnload("functions.js");AJAX.fireOnload("navigation.js");AJAX.fireOnload("indexes.js");AJAX.fireOnload("common.js");AJAX.fireOnload("page_settings.js");AJAX.fireOnload("shortcuts_handler.js");AJAX.fireOnload("tbl_change.js");AJAX.fireOnload("gis_data_editor.js");AJAX.fireOnload("multi_column_sort.js");AJAX.fireOnload("makegrid.js");AJAX.fireOnload("sql.js");AJAX.fireOnload("console.js");});
+// ]]></script><noscript><style>html{display:block}</style></noscript></head><body><div id="pma_navigation"><div id="pma_navigation_resizer"></div><div id="pma_navigation_collapser"></div><div id="pma_navigation_content"><div id="pma_navigation_header"><a class="hide navigation_url" href="navigation.php?ajax_request=1"></a>    <div id="pmalogo">
+                    <a href="index.php" >
+                <img src="./themes/pmahomme/img/logo_left.png" alt="phpMyAdmin" id="imgpmalogo" />
+                    </a>
+            </div>
+<!-- LINKS START --><div id="navipanellinks"><a href="index.php" title="Startpagina"><img src="themes/dot.gif" title="Startpagina" alt="Startpagina" class="icon ic_b_home" /></a><a href="logout.php" class="logout disableAjax" title="Afmelden"><img src="themes/dot.gif" title="Afmelden" alt="Afmelden" class="icon ic_s_loggoff" /></a><a href="./doc/html/index.html" target="documentation" title="phpMyAdmin-documentatie"><img src="themes/dot.gif" title="phpMyAdmin-documentatie" alt="phpMyAdmin-documentatie" class="icon ic_b_docs" /></a><a href="./url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F5.7%2Fen%2Findex.html" target="mysql_doc" title="Documentatie"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_sqlhelp" /></a><a href="#" id="pma_navigation_settings_icon" title="Navigatiepaneelinstellingen"><img src="themes/dot.gif" title="Navigatiepaneelinstellingen" alt="Navigatiepaneelinstellingen" class="icon ic_s_cog" /></a><a href="#" id="pma_navigation_reload" title="Navigatiepaneel herladen"><img src="themes/dot.gif" title="Navigatiepaneel herladen" alt="Navigatiepaneel herladen" class="icon ic_s_reload" /></a></div><!-- LINKS ENDS --><!-- SERVER CHOICE START --><div id="serverChoice"><form method="post" action="index.php" class="disableAjax"><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" /><label for="select_server">Huidige server:</label> <select name="server" id="select_server" class="autosubmit"><option value="">(Servers) ...</option>
+<option value="1"  selected="selected">MySQL</option>
+<option value="2" >MariaDB</option>
+</select></form></div><!-- SERVER CHOICE END --><img src="themes/dot.gif" title="Laden…" alt="Laden…" style="visibility: hidden; display:none" class="icon ic_ajax_clock_small throbber" /></div><div id="pma_navigation_tree" class="list_container synced highlight"><div class="pma_quick_warp"><div class="drop_list"><span title="Recente tabellen" class="drop_button">Recentelijk</span><ul id="pma_recent_list"><li class="warp_link"><a href="tbl_recent_favorite.php?db=webshop&amp;table=t_products">`webshop`.`t_products`</a></li></ul></div><div class="drop_list"><span title="Favoriete tabellen" class="drop_button">Favorieten</span><ul id="pma_favorite_list"><li class="warp_link">Er zijn geen favoriete tabellen.</li></ul></div><div class="clearfloat"></div></div><div class="clearfloat"></div><ul><!-- CONTROLS START --><li id="navigation_controls_outer"><div id="navigation_controls"><a href="#" id="pma_navigation_collapse" title="Alles samenvouwen"><img src="themes/dot.gif" title="Alles samenvouwen" alt="Alles samenvouwen" class="icon ic_s_collapseall" /></a><a href="#" id="pma_navigation_sync" title="Loskoppelen van hoofdpaneel"><img src="themes/dot.gif" title="Loskoppelen van hoofdpaneel" alt="Loskoppelen van hoofdpaneel" class="icon ic_s_link" /></a></div></li><!-- CONTROLS ENDS --></ul><div id='pma_navigation_tree_content'><ul><li class="first new_database italics"><div class='block'><i class='first'></i></div><div class='block '><a href='server_databases.php?server=1'><img src="themes/dot.gif" title="" alt="" class="icon ic_b_newdb" /></a></div><a class='hover_show_full' href='server_databases.php?server=1' title=''>Nieuw</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.YnJvbWFuY2U=</span><span class='hide vPath'>cm9vdA==.YnJvbWFuY2U=</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Uitklappen/samenvouwen" alt="Uitklappen/samenvouwen" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=bromance&amp;'><img src="themes/dot.gif" title="Databasebewerkingen" alt="Databasebewerkingen" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=bromance' title='Structuur'>bromance</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h</span><span class='hide vPath'>cm9vdA==.aW5mb3JtYXRpb25fc2NoZW1h</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Uitklappen/samenvouwen" alt="Uitklappen/samenvouwen" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=information_schema&amp;'><img src="themes/dot.gif" title="Databasebewerkingen" alt="Databasebewerkingen" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=information_schema' title='Structuur'>information_schema</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.bXlzcWw=</span><span class='hide vPath'>cm9vdA==.bXlzcWw=</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Uitklappen/samenvouwen" alt="Uitklappen/samenvouwen" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=mysql&amp;'><img src="themes/dot.gif" title="Databasebewerkingen" alt="Databasebewerkingen" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=mysql' title='Structuur'>mysql</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h</span><span class='hide vPath'>cm9vdA==.cGVyZm9ybWFuY2Vfc2NoZW1h</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Uitklappen/samenvouwen" alt="Uitklappen/samenvouwen" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=performance_schema&amp;'><img src="themes/dot.gif" title="Databasebewerkingen" alt="Databasebewerkingen" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=performance_schema' title='Structuur'>performance_schema</a><div class="clearfloat"></div></li><li class="database"><div class='block'><i></i><b></b><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.c3lz</span><span class='hide vPath'>cm9vdA==.c3lz</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Uitklappen/samenvouwen" alt="Uitklappen/samenvouwen" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=sys&amp;'><img src="themes/dot.gif" title="Databasebewerkingen" alt="Databasebewerkingen" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=sys' title='Structuur'>sys</a><div class="clearfloat"></div></li><li class="last database"><div class='block'><i></i><a class="expander" href='#'><span class='hide aPath'>cm9vdA==.d2Vic2hvcA==</span><span class='hide vPath'>cm9vdA==.d2Vic2hvcA==</span><span class='hide pos'>0</span><img src="themes/dot.gif" title="Uitklappen/samenvouwen" alt="Uitklappen/samenvouwen" class="icon ic_b_plus" /></a></div><div class='block '><a href='db_operations.php?server=1&amp;db=webshop&amp;'><img src="themes/dot.gif" title="Databasebewerkingen" alt="Databasebewerkingen" class="icon ic_s_db" /></a></div><a class='hover_show_full' href='db_structure.php?server=1&amp;db=webshop' title='Structuur'>webshop</a><div class="clearfloat"></div></li></ul></div></div><div id="pma_navi_settings_container"><div id="pma_navigation_settings"><div class="page_settings"><form method="post" action="sql.php?db=webshop&amp;table=t_products&amp;server=1&amp;target=" class="config-form disableAjax"><input type="hidden" name="tab_hash" value="" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" />
+<input type="hidden" name="submit_save" value="Navi" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" /><ul class="tabs responsivetable">
+
+                                    <li>
+
+            <a href="#Navi_panel">
+            Navigatiepaneel
+            </a>
+        </li>
+                                <li>
+
+            <a href="#Navi_tree">
+            Navigatieboom
+            </a>
+        </li>
+                                <li>
+
+            <a href="#Navi_servers">
+            Servers
+            </a>
+        </li>
+                                <li>
+
+            <a href="#Navi_databases">
+            Databases
+            </a>
+        </li>
+                                <li>
+
+            <a href="#Navi_tables">
+            Tabellen
+            </a>
+        </li>
+            </ul>
+<br /><div class="tabs_contents"><fieldset class="optbox" id="Navi_panel">
+<legend>Navigatiepaneel</legend>
+    <p>Weergaveopties voor het navigatiepaneel.</p>
+<table width="100%" cellspacing="0">
+<tr><th><label for="ShowDatabasesNavigationAsTree">Geef databases navigatiescherm weer als boomstructuur</label><span class="doc"><a href="./doc/html/config.html#cfg_ShowDatabasesNavigationAsTree" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>In het navigatiepanel, vervang de database boomstructuur door een selectie</small></th><td><span class="checkbox"><input type="checkbox" name="ShowDatabasesNavigationAsTree" id="ShowDatabasesNavigationAsTree" checked="checked" /></span><a class="restore-default hide" href="#ShowDatabasesNavigationAsTree" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationLinkWithMainPanel">Verbinden met hoofdpaneel</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationLinkWithMainPanel" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Koppelen met hoofdpaneel door de huidige database of tabel te markeren.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationLinkWithMainPanel" id="NavigationLinkWithMainPanel" checked="checked" /></span><a class="restore-default hide" href="#NavigationLinkWithMainPanel" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationDisplayLogo">Toon logo</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationDisplayLogo" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Toon logo in navigatiepaneel.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationDisplayLogo" id="NavigationDisplayLogo" checked="checked" /></span><a class="restore-default hide" href="#NavigationDisplayLogo" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationLogoLink">URL voor de link van het logo</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationLogoLink" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>URL waar het logo in het navigatiepaneel naar doorverwijst.</small></th><td><input type="text" class="all85" name="NavigationLogoLink" id="NavigationLogoLink" value="index.php" /><a class="restore-default hide" href="#NavigationLogoLink" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationLogoLinkWindow">Linkbestemming van logo</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationLogoLinkWindow" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Open de pagina in het hoofdvenster (<kbd>main</kbd>) of in een nieuw venster (<kbd>new</kbd>).</small></th><td><select class="all85" name="NavigationLogoLinkWindow" id="NavigationLogoLinkWindow"><option value="main" selected="selected">main</option><option value="new">new</option></select><a class="restore-default hide" href="#NavigationLogoLinkWindow" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreePointerEnable">Markeren inschakelen</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreePointerEnable" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Server onder de muispijl markeren.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreePointerEnable" id="NavigationTreePointerEnable" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreePointerEnable" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="FirstLevelNavigationItems">Maximum elementen op het eerste niveau</label><span class="doc"><a href="./doc/html/config.html#cfg_FirstLevelNavigationItems" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Het aantal elementen dat getoond wordt op iedere pagina op het eerste niveau van de navigatieboom.</small></th><td><input type="number" name="FirstLevelNavigationItems" id="FirstLevelNavigationItems" value="100" /><a class="restore-default hide" href="#FirstLevelNavigationItems" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeDisplayItemFilterMinimum">Minimale aantal elementen waarbij een filterveld wordt getoond</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeDisplayItemFilterMinimum" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Het minimale aantal elementen (tabellen, views, routines en evenementen) waarbij een filterveld wordt getoond.</small></th><td><input type="number" name="NavigationTreeDisplayItemFilterMinimum" id="NavigationTreeDisplayItemFilterMinimum" value="30" /><a class="restore-default hide" href="#NavigationTreeDisplayItemFilterMinimum" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NumRecentTables">Recent gebruikte tabellen</label><span class="doc"><a href="./doc/html/config.html#cfg_NumRecentTables" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Het maximum aantal recent gebruikte tabellen dat wordt getoond; vul 0 in om uit te schakelen.</small></th><td><input type="number" name="NumRecentTables" id="NumRecentTables" value="10" /><a class="restore-default hide" href="#NumRecentTables" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NumFavoriteTables">Favoriete tabellen</label><span class="doc"><a href="./doc/html/config.html#cfg_NumFavoriteTables" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Het maximum aantal favoriete tabellen dat wordt getoond; vul 0 in om uit te schakelen.</small></th><td><input type="number" name="NumFavoriteTables" id="NumFavoriteTables" value="10" /><a class="restore-default hide" href="#NumFavoriteTables" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationWidth">Navigatiepaneelbreedte</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationWidth" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Zet op 0 om het navigatiepaneel in te klappen.</small></th><td><input type="number" name="NavigationWidth" id="NavigationWidth" value="240" /><a class="restore-default hide" href="#NavigationWidth" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_tree">
+<legend>Navigatieboom</legend>
+    <p>Aanpassen van de navigatieboom.</p>
+<table width="100%" cellspacing="0">
+<tr><th><label for="MaxNavigationItems">Maximum elementen in tak</label><span class="doc"><a href="./doc/html/config.html#cfg_MaxNavigationItems" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Het aantal elementen dat getoond wordt op iedere pagina van de navigatieboom.</small></th><td><input type="number" name="MaxNavigationItems" id="MaxNavigationItems" value="50" /><a class="restore-default hide" href="#MaxNavigationItems" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeEnableGrouping">Groepeer elementen in de boomstructuur</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeEnableGrouping" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Groepeer elementen in een boomstructuur ( op basis van het scheidingsteken zoals gedefinieerd in de Databases en Tabellen tabs hier boven).</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeEnableGrouping" id="NavigationTreeEnableGrouping" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeEnableGrouping" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeEnableExpansion">Uitklappen van de navigatiestructuur inschakelen</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeEnableExpansion" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Of uitklappen van de boomstructuur aangeboden mag worden in het navigatiepaneel.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeEnableExpansion" id="NavigationTreeEnableExpansion" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeEnableExpansion" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeShowTables">Toon tabellen in boomstructuur</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeShowTables" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Of tabellen getoond worden in de navigatieboom</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowTables" id="NavigationTreeShowTables" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeShowTables" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeShowViews">Versies weergeven in boomstructuur</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeShowViews" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Of views getoond worden onder database in de navigatieboom</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowViews" id="NavigationTreeShowViews" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeShowViews" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeShowFunctions">Toon functies in boomstructuur</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeShowFunctions" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Of functies getoond worden onder database in de navigatieboom</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowFunctions" id="NavigationTreeShowFunctions" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeShowFunctions" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeShowProcedures">Laat procedures zien een boomstructuur</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeShowProcedures" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Of procedures getoond worden onder database in de navigatieboom</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowProcedures" id="NavigationTreeShowProcedures" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeShowProcedures" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeShowEvents">Toon gebeurtenissen in een boomstructuur</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeShowEvents" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Of gebeurtenissen getoond worden onder database in de navigatieboom</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationTreeShowEvents" id="NavigationTreeShowEvents" checked="checked" /></span><a class="restore-default hide" href="#NavigationTreeShowEvents" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_servers">
+<legend>Servers</legend>
+    <p>Weergaveopties voor servers.</p>
+<table width="100%" cellspacing="0">
+<tr><th><label for="NavigationDisplayServers">Toon serverkeuze</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationDisplayServers" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Toon serverkeuze bovenaan het navigatiepaneel.</small></th><td><span class="checkbox"><input type="checkbox" name="NavigationDisplayServers" id="NavigationDisplayServers" checked="checked" /></span><a class="restore-default hide" href="#NavigationDisplayServers" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="DisplayServersList">Toon servers als een lijst</label><span class="doc"><a href="./doc/html/config.html#cfg_DisplayServersList" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Toon een serveroverzicht als een lijst in plaats van een afrolmenu.</small></th><td><span class="checkbox"><input type="checkbox" name="DisplayServersList" id="DisplayServersList" /></span><a class="restore-default hide" href="#DisplayServersList" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_databases">
+<legend>Databases</legend>
+    <p>Weergaveopties voor databases.</p>
+<table width="100%" cellspacing="0">
+<tr><th><label for="NavigationTreeDisplayDbFilterMinimum">Minimale aantal databases waarbij een filterveld wordt getoond</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeDisplayDbFilterMinimum" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span></th><td><input type="number" name="NavigationTreeDisplayDbFilterMinimum" id="NavigationTreeDisplayDbFilterMinimum" value="30" /><a class="restore-default hide" href="#NavigationTreeDisplayDbFilterMinimum" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeDbSeparator">Scheidingsteken database boomstructuur</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeDbSeparator" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Tekenreeks die databasenamen opsplitst in verschillende niveaus.</small></th><td><input type="text" size="25" name="NavigationTreeDbSeparator" id="NavigationTreeDbSeparator" value="_" /><a class="restore-default hide" href="#NavigationTreeDbSeparator" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr></table>
+</fieldset>
+<fieldset class="optbox" id="Navi_tables">
+<legend>Tabellen</legend>
+    <p>Weergaveopties voor tabellen.</p>
+<table width="100%" cellspacing="0">
+<tr><th><label for="NavigationTreeDefaultTabTable">Doel van snel-icoon</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeDefaultTabTable" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span></th><td><select class="all85" name="NavigationTreeDefaultTabTable" id="NavigationTreeDefaultTabTable"><option value="structure" selected="selected">Structuur</option><option value="sql">SQL</option><option value="search">Zoeken</option><option value="insert">Invoegen</option><option value="browse">Verkennen</option></select><a class="restore-default hide" href="#NavigationTreeDefaultTabTable" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeDefaultTabTable2">Doel van de tweede snelle toegang pictogram</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeDefaultTabTable2" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span></th><td><select class="all85" name="NavigationTreeDefaultTabTable2" id="NavigationTreeDefaultTabTable2"><option value="" selected="selected"></option><option value="structure">Structuur</option><option value="sql">SQL</option><option value="search">Zoeken</option><option value="insert">Invoegen</option><option value="browse">Verkennen</option></select><a class="restore-default hide" href="#NavigationTreeDefaultTabTable2" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeTableSeparator">Scheidingsteken tabelboomstructuur</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeTableSeparator" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Tekenreeks die tabelnamen opsplitst in verschillende niveaus.</small></th><td><input type="text" size="25" name="NavigationTreeTableSeparator" id="NavigationTreeTableSeparator" value="__" /><a class="restore-default hide" href="#NavigationTreeTableSeparator" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="NavigationTreeTableLevel">Maximum diepte tabelboomstructuur</label><span class="doc"><a href="./doc/html/config.html#cfg_NavigationTreeTableLevel" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span></th><td><input type="number" name="NavigationTreeTableLevel" id="NavigationTreeTableLevel" value="1" /><a class="restore-default hide" href="#NavigationTreeTableLevel" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr></table>
+</fieldset>
+</div>
+</form>
+<script type="text/javascript">
+if (typeof configInlineParams === "undefined" || !Array.isArray(configInlineParams)) configInlineParams = [];
+configInlineParams.push(function() {
+validateField('FirstLevelNavigationItems', 'PMA_validatePositiveNumber', true);
+validateField('NumRecentTables', 'PMA_validateNonNegativeNumber', true);
+validateField('NumFavoriteTables', 'PMA_validateNonNegativeNumber', true);
+validateField('NavigationWidth', 'PMA_validateNonNegativeNumber', true);
+validateField('MaxNavigationItems', 'PMA_validatePositiveNumber', true);
+validateField('NavigationTreeTableLevel', 'PMA_validatePositiveNumber', true);
+$.extend(PMA_messages, {
+	'error_nan_p': 'Geen positief getal!',
+	'error_nan_nneg': 'Geen niet-negatief getal!',
+	'error_incorrect_port': 'Geen geldig poortnummer!',
+	'error_invalid_value': 'Foutieve waarde!',
+	'error_value_lte': 'Waarde moet lager of gelijk zijn aan %s!'});
+$.extend(defaultValues, {
+	'ShowDatabasesNavigationAsTree': true,
+	'NavigationLinkWithMainPanel': true,
+	'NavigationDisplayLogo': true,
+	'NavigationLogoLink': 'index.php',
+	'NavigationLogoLinkWindow': ['main'],
+	'NavigationTreePointerEnable': true,
+	'FirstLevelNavigationItems': '100',
+	'NavigationTreeDisplayItemFilterMinimum': '30',
+	'NumRecentTables': '10',
+	'NumFavoriteTables': '10',
+	'NavigationWidth': '240',
+	'MaxNavigationItems': '50',
+	'NavigationTreeEnableGrouping': true,
+	'NavigationTreeEnableExpansion': true,
+	'NavigationTreeShowTables': true,
+	'NavigationTreeShowViews': true,
+	'NavigationTreeShowFunctions': true,
+	'NavigationTreeShowProcedures': true,
+	'NavigationTreeShowEvents': true,
+	'NavigationDisplayServers': true,
+	'DisplayServersList': false,
+	'NavigationTreeDisplayDbFilterMinimum': '30',
+	'NavigationTreeDbSeparator': '_',
+	'NavigationTreeDefaultTabTable': ['structure'],
+	'NavigationTreeDefaultTabTable2': [''],
+	'NavigationTreeTableSeparator': '__',
+	'NavigationTreeTableLevel': '1'});
+});
+if (typeof configScriptLoaded !== "undefined" && configInlineParams) loadInlineConfig();
+</script>
+</div></div></div></div><div class="pma_drop_handler">Bestanden hier neerzetten</div><div class="pma_sql_import_status"><h2>SQL upload ( <span class="pma_import_count">0</span> ) <span class="close">x</span><span class="minimize">-</span></h2><div></div></div></div><noscript><div class="error"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_error" /> Javascript moet ingeschakeld zijn voorbij dit punt!</div></noscript><div id='floating_menubar'></div><div id='serverinfo'><img src="themes/dot.gif" title="" alt="" class="icon ic_s_host item" /><a href="index.php" class="item">Server: MySQL:3306</a><span class='separator item'>&nbsp;»</span><img src="themes/dot.gif" title="" alt="" class="icon ic_s_db item" /><a href="db_structure.php?db=webshop" class="item">Database: webshop</a><span class='separator item'>&nbsp;»</span><img src="themes/dot.gif" title="" alt="" class="icon ic_s_tbl item" /><a href="sql.php?db=webshop&amp;table=t_products" class="item">Tabel: t_products</a><div class="clearfloat"></div></div><div id="topmenucontainer" class="menucontainer"><i class="scrollindicator scrollindicator--left"><a href="#" class="tab"></a></i><div class="navigationbar"><ul id="topmenu"  class="resizable-menu"><li class="active">
+
+            <a href="sql.php?db=webshop&amp;table=t_products&amp;pos=0" class="tabactive">
+            <img src="themes/dot.gif" title="Verkennen" alt="Verkennen" class="icon ic_b_browse" />&nbsp;Verkennen
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_structure.php?db=webshop&amp;table=t_products" class="tab">
+            <img src="themes/dot.gif" title="Structuur" alt="Structuur" class="icon ic_b_props" />&nbsp;Structuur
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_sql.php?db=webshop&amp;table=t_products" class="tab">
+            <img src="themes/dot.gif" title="SQL" alt="SQL" class="icon ic_b_sql" />&nbsp;SQL
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_select.php?db=webshop&amp;table=t_products" class="tab">
+            <img src="themes/dot.gif" title="Zoeken" alt="Zoeken" class="icon ic_b_search" />&nbsp;Zoeken
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_change.php?db=webshop&amp;table=t_products" class="tab">
+            <img src="themes/dot.gif" title="Invoegen" alt="Invoegen" class="icon ic_b_insrow" />&nbsp;Invoegen
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_export.php?db=webshop&amp;table=t_products&amp;single_table=true" class="tab">
+            <img src="themes/dot.gif" title="Exporteren" alt="Exporteren" class="icon ic_b_tblexport" />&nbsp;Exporteren
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_import.php?db=webshop&amp;table=t_products" class="tab">
+            <img src="themes/dot.gif" title="Importeren" alt="Importeren" class="icon ic_b_tblimport" />&nbsp;Importeren
+            </a>
+        </li>
+<li>
+
+            <a href="server_privileges.php?db=webshop&amp;table=t_products&amp;checkprivsdb=webshop&amp;checkprivstable=t_products&amp;viewing_mode=table" class="tab">
+            <img src="themes/dot.gif" title="Rechten" alt="Rechten" class="icon ic_s_rights" />&nbsp;Rechten
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_operations.php?db=webshop&amp;table=t_products" class="tab">
+            <img src="themes/dot.gif" title="Handelingen" alt="Handelingen" class="icon ic_b_tblops" />&nbsp;Handelingen
+            </a>
+        </li>
+<li>
+
+            <a href="tbl_triggers.php?db=webshop&amp;table=t_products" class="tab">
+            <img src="themes/dot.gif" title="Triggers" alt="Triggers" class="icon ic_b_triggers" />&nbsp;Triggers
+            </a>
+        </li>
+<div class="clearfloat"></div></ul></div>
+<i class="scrollindicator scrollindicator--right"><a href="#" class="tab"></a></i></div>
+<span id="page_nav_icons"><span id="lock_page_icon"></span><span id="page_settings_icon"><img src="themes/dot.gif" title="Pagina gerelateerde instellingen" alt="Pagina gerelateerde instellingen" class="icon ic_s_cog" /></span><a id="goto_pagetop" href="#"><img src="themes/dot.gif" title="Klik op de balk om te scrollen naar het begin van de pagina" alt="Klik op de balk om te scrollen naar het begin van de pagina" class="icon ic_s_top" /></a></span><div id="pma_console_container">
+    <div id="pma_console">
+                <div class="toolbar collapsed">
+                    <div class="switch_button console_switch">
+            <img src="themes/dot.gif" title="SQL Query Console" alt="SQL Query Console" class="icon ic_console" />
+            <span>Console</span>
+        </div>
+                            <div class="button clear">
+            
+            <span>Leegmaken</span>
+        </div>
+                            <div class="button history">
+            
+            <span>Geschiedenis</span>
+        </div>
+                            <div class="button options">
+            
+            <span>Opties</span>
+        </div>
+                            <div class="button bookmarks">
+            
+            <span>Bladwijzers</span>
+        </div>
+                            <div class="button debug hide">
+            
+            <span>Debug SQL</span>
+        </div>
+            </div>
+                <div class="content">
+            <div class="console_message_container">
+                <div class="message welcome">
+                    <span id="instructions-0">
+                        Druk op Ctrl+Enter om de query uit te voeren                    </span>
+                    <span class="hide" id="instructions-1">
+                        Druk op Enter om de query uit te voeren                    </span>
+                </div>
+                            </div><!-- console_message_container -->
+            <div class="query_input">
+                <span class="console_query_input"></span>
+            </div>
+        </div><!-- message end -->
+                <div class="mid_layer"></div>
+                <div class="card" id="debug_console">
+            <div class="toolbar ">
+                    <div class="button order order_asc">
+            
+            <span>oplopend</span>
+        </div>
+                            <div class="button order order_desc">
+            
+            <span>aflopend</span>
+        </div>
+                            <div class="text">
+            
+            <span>Volgorde:</span>
+        </div>
+                            <div class="switch_button">
+            
+            <span>Debug SQL</span>
+        </div>
+                            <div class="button order_by sort_count">
+            
+            <span>Aantal</span>
+        </div>
+                            <div class="button order_by sort_exec">
+            
+            <span>Uitvoerings volgorde</span>
+        </div>
+                            <div class="button order_by sort_time">
+            
+            <span>Gebruikte tijd</span>
+        </div>
+                            <div class="text">
+            
+            <span>Volgorde:</span>
+        </div>
+                            <div class="button group_queries">
+            
+            <span>Groep query&#039;s</span>
+        </div>
+                            <div class="button ungroup_queries">
+            
+            <span>Niet gegroepeerde query&#039;s</span>
+        </div>
+            </div>
+            <div class="content debug">
+                <div class="message welcome"></div>
+                <div class="debugLog"></div>
+            </div> <!-- Content -->
+            <div class="templates">
+                <div class="debug_query action_content">
+                    <span class="action collapse">
+            Samenvouwen
+                    </span>
+                            <span class="action expand">
+            Uitklappen
+                    </span>
+                            <span class="action dbg_show_trace">
+            Toon bewerkingen
+                    </span>
+                            <span class="action dbg_hide_trace">
+            Verberg bewerkingen
+                    </span>
+                            <span class="text count hide">
+            Aantal
+                    </span>
+                            <span class="text time">
+            Gebruikte tijd
+                    </span>
+            </div>
+            </div> <!-- Template -->
+        </div> <!-- Debug SQL card -->
+                        <div class="card" id="pma_console_options">
+            <div class="toolbar ">
+                    <div class="switch_button">
+            
+            <span>Opties</span>
+        </div>
+                            <div class="button default">
+            
+            <span>Standaardwaarde instellen</span>
+        </div>
+            </div>
+            <div class="content">
+                <label>
+                    <input type="checkbox" name="always_expand">Queryberichten altijd volledig weergeven                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="start_history">Querygeschiedenis aan begin weergeven                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="current_query">Toon huidige blader query                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="enter_executes">
+                        Voer queries uit met de Enter toets en voeg een nieuwe regel toe met Shift + Enter. Om dit permanent te maken, bekijk het instellingenmenu.                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="dark_theme">Wissel naar donker thema                </label>
+                <br>
+            </div>
+        </div> <!-- Options card -->
+        <div class="templates">
+                        <div class="query_actions">
+                    <span class="action collapse">
+            Samenvouwen
+                    </span>
+                            <span class="action expand">
+            Uitklappen
+                    </span>
+                            <span class="action requery">
+            Query opnieuw uitvoeren
+                    </span>
+                            <span class="action edit">
+            Wijzigen
+                    </span>
+                            <span class="action explain">
+            Verklaar
+                    </span>
+                            <span class="action profiling">
+            Profiling
+                    </span>
+                            <span class="action bookmark">
+            Bladwijzer
+                    </span>
+                            <span class="text failed">
+            Query mislukt
+                    </span>
+                            <span class="text targetdb">
+            Database
+                    </span>
+                            <span class="text query_time">
+            Query-uitvoertijd
+                    </span>
+            </div>
+        </div>
+    </div> <!-- #console end -->
+</div> <!-- #console_container end -->
+<div id="page_content"><a class="hide" id="update_recent_tables" href="index.php?ajax_request=1&amp;recent_table=1"></a><div id="page_settings_modal"><div class="page_settings"><form method="post" action="sql.php?db=webshop&amp;table=t_products&amp;server=1&amp;target=" class="config-form disableAjax"><input type="hidden" name="tab_hash" value="" /><input type="hidden" name="check_page_refresh"  id="check_page_refresh" value="" />
+<input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" />
+<input type="hidden" name="submit_save" value="Browse" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" /><ul class="tabs responsivetable">
+
+                                    <li>
+
+            <a href="#Browse">
+            Verkenmodus
+            </a>
+        </li>
+            </ul>
+<br /><div class="tabs_contents"><fieldset class="optbox" id="Browse">
+<legend>Verkenmodus</legend>
+    <p>Aanpassen van verkenmodus.</p>
+<table width="100%" cellspacing="0">
+<tr><th><label for="TableNavigationLinksMode">Navigatiebalk voor tabellen</label><span class="doc"><a href="./doc/html/config.html#cfg_TableNavigationLinksMode" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Gebruik enkel pictogrammen, enkel tekst of beide.</small></th><td><select class="all85" name="TableNavigationLinksMode" id="TableNavigationLinksMode"><option value="icons" selected="selected">Pictogrammen</option><option value="text">Tekst</option><option value="both">Beide</option></select><a class="restore-default hide" href="#TableNavigationLinksMode" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="ActionLinksMode">Hoe de verschillende acties te tonen</label><span class="doc"><a href="./doc/html/config.html#cfg_ActionLinksMode" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Gebruik enkel pictogrammen, enkel tekst of beide.</small></th><td><select class="all85" name="ActionLinksMode" id="ActionLinksMode"><option value="icons">Pictogrammen</option><option value="text">Tekst</option><option value="both" selected="selected">Beide</option></select><a class="restore-default hide" href="#ActionLinksMode" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="ShowAll">Toon alle rijen</label><span class="doc"><a href="./doc/html/config.html#cfg_ShowAll" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Of er een knop "Toon alle (rijen)" moet worden getoond aan de gebruiker.</small></th><td><span class="checkbox"><input type="checkbox" name="ShowAll" id="ShowAll" /></span><a class="restore-default hide" href="#ShowAll" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="MaxRows">Maximum aantal te tonen rijen</label><span class="doc"><a href="./doc/html/config.html#cfg_MaxRows" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Het maximum aantal te tonen rijen tijdens het verkennen van een resultatenset. Indien de resultatenset meer rijen bevat worden de links "Volgende" en "Vorige" getoond.</small></th><td><select class="all85" name="MaxRows" id="MaxRows"><option value="25" selected="selected">25</option><option value="50">50</option><option value="100">100</option><option value="250">250</option><option value="500">500</option></select><a class="restore-default hide" href="#MaxRows" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="Order">Standaard sorteervolgorde</label><span class="doc"><a href="./doc/html/config.html#cfg_Order" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small><kbd>SMART</kbd> - op aflopende volgorde voor kolommen van het type TIME, DATE, DATETIME en TIMESTAMP, oplopend voor overige kolommen.</small></th><td><select class="all85" name="Order" id="Order"><option value="ASC">ASC</option><option value="DESC">DESC</option><option value="SMART" selected="selected">SMART</option></select><a class="restore-default hide" href="#Order" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="BrowsePointerEnable">Muispijl markeren</label><span class="doc"><a href="./doc/html/config.html#cfg_BrowsePointerEnable" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>De door de muis aangewezen rij markeren.</small></th><td><span class="checkbox"><input type="checkbox" name="BrowsePointerEnable" id="BrowsePointerEnable" checked="checked" /></span><a class="restore-default hide" href="#BrowsePointerEnable" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="BrowseMarkerEnable">Rij markering</label><span class="doc"><a href="./doc/html/config.html#cfg_BrowseMarkerEnable" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Geselecteerde rijen markeren.</small></th><td><span class="checkbox"><input type="checkbox" name="BrowseMarkerEnable" id="BrowseMarkerEnable" checked="checked" /></span><a class="restore-default hide" href="#BrowseMarkerEnable" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="GridEditing">Rasterbewerken: trigger actie</label><span class="doc"><a href="./doc/html/config.html#cfg_GridEditing" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span></th><td><select class="all85" name="GridEditing" id="GridEditing"><option value="click">Klik</option><option value="double-click" selected="selected">Dubbelklikken</option><option value="disabled">Uitgeschakeld</option></select><a class="restore-default hide" href="#GridEditing" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="SaveCellsAtOnce">Roosterbewerkingen : alle wijzigingen aan cellen tegelijk opslaan</label><span class="doc"><a href="./doc/html/config.html#cfg_SaveCellsAtOnce" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span></th><td><span class="checkbox"><input type="checkbox" name="SaveCellsAtOnce" id="SaveCellsAtOnce" /></span><a class="restore-default hide" href="#SaveCellsAtOnce" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="RepeatCells">Kopregels herhalen</label><span class="doc"><a href="./doc/html/config.html#cfg_RepeatCells" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Herhaal de kopregel elke X cellen, <kbd>0</kbd> schakelt deze functie uit.</small></th><td><input type="number" name="RepeatCells" id="RepeatCells" value="100" /><a class="restore-default hide" href="#RepeatCells" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="LimitChars">Beperk aantal tekens in een kolom</label><span class="doc"><a href="./doc/html/config.html#cfg_LimitChars" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Maximaal aantal karakters dat wordt getoond in een niet-numerieke kolom bij het bekijken van queryresultaten.</small></th><td><input type="number" name="LimitChars" id="LimitChars" value="50" /><a class="restore-default hide" href="#LimitChars" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="RowActionLinks">Waar de tabelregellinks getoond worden</label><span class="doc"><a href="./doc/html/config.html#cfg_RowActionLinks" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Dit zijn de links Bewerken, Kopiëren en Verwijderen.</small></th><td><select class="all85" name="RowActionLinks" id="RowActionLinks"><option value="none">Nergens</option><option value="left" selected="selected">Links</option><option value="right">Rechts</option><option value="both">Beide</option></select><a class="restore-default hide" href="#RowActionLinks" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="RowActionLinksWithoutUnique">Toon hoe dan ook links naar de rijen</label><span class="doc"><a href="./doc/html/config.html#cfg_RowActionLinksWithoutUnique" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Of links naar rijen getoond worden zelfs bij afwezigheid van een uniek sleutelveld.</small></th><td><span class="checkbox"><input type="checkbox" name="RowActionLinksWithoutUnique" id="RowActionLinksWithoutUnique" /></span><a class="restore-default hide" href="#RowActionLinksWithoutUnique" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="TablePrimaryKeyOrder">Standaard sorteervolgorde voor primaire sleutels</label><span class="doc"><a href="./doc/html/config.html#cfg_TablePrimaryKeyOrder" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Standaard sorteervolgorde voor tabellen met een primaire sleutel.</small></th><td><select class="all85" name="TablePrimaryKeyOrder" id="TablePrimaryKeyOrder"><option value="NONE" selected="selected">Geen</option><option value="ASC">Oplopend</option><option value="DESC">Aflopend</option></select><a class="restore-default hide" href="#TablePrimaryKeyOrder" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="RememberSorting">De tabelsortering onthouden</label><span class="doc"><a href="./doc/html/config.html#cfg_RememberSorting" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Bij het bekijken van tabellen wordt de sorteervolgorde onthouden.</small></th><td><span class="checkbox"><input type="checkbox" name="RememberSorting" id="RememberSorting" checked="checked" /></span><a class="restore-default hide" href="#RememberSorting" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr><tr><th><label for="RelationalDisplay">Relationele weergave</label><span class="doc"><a href="./doc/html/config.html#cfg_RelationalDisplay" target="documentation"><img src="themes/dot.gif" title="Documentatie" alt="Documentatie" class="icon ic_b_help" /></a>
+</span><small>Voor weergaveopties</small></th><td><select class="all85" name="RelationalDisplay" id="RelationalDisplay"><option value="K" selected="selected">sleutelveld</option><option value="D">toon kolom</option></select><a class="restore-default hide" href="#RelationalDisplay" title="Standaardwaarde herstellen"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_reload" /></a></td></tr></table>
+</fieldset>
+</div>
+</form>
+<script type="text/javascript">
+if (typeof configInlineParams === "undefined" || !Array.isArray(configInlineParams)) configInlineParams = [];
+configInlineParams.push(function() {
+validateField('MaxRows', 'PMA_validatePositiveNumber', true);
+validateField('RepeatCells', 'PMA_validateNonNegativeNumber', true);
+validateField('LimitChars', 'PMA_validatePositiveNumber', true);
+$.extend(PMA_messages, {
+	'error_nan_p': 'Geen positief getal!',
+	'error_nan_nneg': 'Geen niet-negatief getal!',
+	'error_incorrect_port': 'Geen geldig poortnummer!',
+	'error_invalid_value': 'Foutieve waarde!',
+	'error_value_lte': 'Waarde moet lager of gelijk zijn aan %s!'});
+$.extend(defaultValues, {
+	'TableNavigationLinksMode': ['icons'],
+	'ActionLinksMode': ['both'],
+	'ShowAll': false,
+	'MaxRows': ['25'],
+	'Order': ['SMART'],
+	'BrowsePointerEnable': true,
+	'BrowseMarkerEnable': true,
+	'GridEditing': ['double-click'],
+	'SaveCellsAtOnce': false,
+	'RepeatCells': '100',
+	'LimitChars': '50',
+	'RowActionLinks': ['left'],
+	'RowActionLinksWithoutUnique': false,
+	'TablePrimaryKeyOrder': ['NONE'],
+	'RememberSorting': true,
+	'RelationalDisplay': ['K']});
+});
+if (typeof configScriptLoaded !== "undefined" && configInlineParams) loadInlineConfig();
+</script>
+</div></div><div class="sqlqueryresults ajax"><div class="result_query">
+<div class="success"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_success" /> Weergave van records 0 - 17 (18 totaal, Query duurde 0,0000 seconden.)</div><div class="sqlOuter"><code class="sql"><pre>
+SELECT * FROM `t_products`
+</pre></code></div><div class="tools print_ignore"><form action="sql.php" method="post"><input type="hidden" name="db" value="webshop" /><input type="hidden" name="table" value="t_products" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" /><input type="hidden" name="sql_query" value="SELECT * FROM `t_products`" /><input type="hidden" name="profiling_form" value="1" /><input type="checkbox" name="profiling" id="" class="autosubmit" /><label for="">Profiling</label>
+</form> [<a href="#" class="inline_edit_sql">Inline bewerken</a>] [&nbsp;<a href="tbl_sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;show_query=1">Wijzigen</a>&nbsp;] [&nbsp;<a href="import.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=EXPLAIN+SELECT+%2A+FROM+%60t_products%60">Verklaar SQL</a>&nbsp;] [&nbsp;<a href="import.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;show_query=1&amp;show_as_php=1">Genereer PHP-code</a>&nbsp;] [&nbsp;<a href="import.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;show_query=1">Ververs</a>]</div></div><table class="navigation nospacing nopadding print_ignore"><tr><td class="navigation_separator"></td><td>
+    <form action="sql.php" method="post">
+        <input type="hidden" name="db" value="webshop" /><input type="hidden" name="table" value="t_products" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" />
+        <input type="hidden" name="sql_query" value="SELECT * FROM `t_products`" />
+        <input type="hidden" name="pos" value="0" />
+        <input type="hidden" name="is_browse_distinct" value="" />
+        <input type="hidden" name="session_max_rows" value="all" />
+        <input type="hidden" name="goto" value="" />
+        <input type="checkbox" name="navig" id="showAll_1366669617" class="showAllRows" value="all" />
+        <label for="showAll_1366669617">Toon alles</label>
+    </form>
+</td>
+<td><div class="navigation_separator">|</div></td><td><div class="save_edited hide"><input type="submit" value="Sla aangepaste gegevens op" /><div class="navigation_separator">|</div></div></td><td><div class="restore_column hide"><input type="submit" value="Kolomvolgorde herstellen" /><div class="navigation_separator">|</div></div></td><td class="navigation_goto"><form action="sql.php" method="post" onsubmit="return (checkFormElementInRange(this, 'session_max_rows', '%d is geen geldig rijnummer.', 1) &amp;&amp; checkFormElementInRange(this, 'pos', '%d is geen geldig rijnummer.', 0, 17))"><input type="hidden" name="db" value="webshop" /><input type="hidden" name="table" value="t_products" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" /><input type="hidden" name="sql_query" value="SELECT * FROM `t_products`" />
+<input type="hidden" name="goto" value="" />
+<input type="hidden" name="pos" size="3" value="0" />
+<input type="hidden" name="is_browse_distinct" value="" />
+Aantal rijen:<select name="session_max_rows" class="autosubmit">
+<option value="25" selected="selected">25</option>
+<option value="50">50</option>
+<option value="100">100</option>
+<option value="250">250</option>
+<option value="500">500</option>
+</select>
+
+</form></td><td class="navigation_separator"></td><td class="largescreenonly"><span>Filter rijen:</span><input type="text" class="filter_rows" placeholder="Zoek in deze tabel" data-for="1366669617" /></td><td class="largescreenonly"><form action="sql.php" method="post" class="print_ignore">
+<input type="hidden" name="db" value="webshop" /><input type="hidden" name="table" value="t_products" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" /><input type="hidden" name="sort_by_key" value="1" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" />Sorteren op sleutel: <select name="sql_query" class="autosubmit">
+<option value="SELECT * FROM `t_products`  
+ ORDER BY `pk_product` ASC">PRIMARY (ASC)</option><option value="SELECT * FROM `t_products`  
+ ORDER BY `pk_product` DESC">PRIMARY (DESC)</option><option value="SELECT * FROM `t_products`  " selected="selected">Geen</option></select>
+</form>
+</td><td class="navigation_separator"></td></tr></table>
+<input class="save_cells_at_once" type="hidden" value="" /><div class="common_hidden_inputs"><input type="hidden" name="db" value="webshop" /><input type="hidden" name="table" value="t_products" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" /></div><input class="table_create_time" type="hidden" value="2019-03-19 16:00:08" /><form method="post" action="sql.php" name="displayOptionsForm" class="ajax print_ignore">
+    <input type="hidden" name="db" value="webshop" /><input type="hidden" name="table" value="t_products" /><input type="hidden" name="sql_query" value="SELECT * FROM `t_products`" /><input type="hidden" name="goto" value="" /><input type="hidden" name="display_options_form" value="1" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" />
+
+            <div id="" style="display: none; overflow:auto;" class="pma_auto_slider" title="Opties">
+
+        <fieldset>
+            <div class="formelement">
+                                <input type="radio" name="pftext" id="pftext_1366669617_P" value="P" checked="checked" />
+<label for="pftext_1366669617_P">Gedeeltelijke teksten</label>
+<br />
+<input type="radio" name="pftext" id="pftext_1366669617_F" value="F" />
+<label for="pftext_1366669617_F">Volledige teksten</label>
+<br />
+
+            </div>
+
+            
+            <div class="formelement">
+                <input type="checkbox" name="display_binary" id="display_binary_1366669617" checked="checked" /><label for="display_binary_1366669617">Toon binaire inhoud</label>
+                <input type="checkbox" name="display_blob" id="display_blob_1366669617" /><label for="display_blob_1366669617">Toon BLOB-inhoud</label>
+            </div>
+
+                        <div class="formelement">
+                <input type="checkbox" name="hide_transformation" id="hide_transformation_1366669617" /><label for="hide_transformation_1366669617">Browsertransformaties verbergen</label>
+            </div>
+
+
+                            <div class="formelement">
+                    <input type="radio" name="geoOption" id="geoOption_1366669617_GEOM" value="GEOM" checked="checked" />
+<label for="geoOption_1366669617_GEOM">Geometrie</label>
+<br />
+<input type="radio" name="geoOption" id="geoOption_1366669617_WKT" value="WKT" />
+<label for="geoOption_1366669617_WKT">Goed bekende tekst</label>
+<br />
+<input type="radio" name="geoOption" id="geoOption_1366669617_WKB" value="WKB" />
+<label for="geoOption_1366669617_WKB">Goed gekende binaire waarde</label>
+<br />
+
+                </div>
+                        <div class="clearfloat"></div>
+        </fieldset>
+
+        <fieldset class="tblFooters">
+            <input type="submit" value="Starten" />
+        </fieldset>
+    </div></form>
+    <form method="post"
+        action="tbl_row_action.php"
+        name="resultsForm"
+        id="resultsForm_1366669617"
+        class="ajax">
+        <input type="hidden" name="db" value="webshop" /><input type="hidden" name="table" value="t_products" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" />
+        <input type="hidden" name="goto" value="sql.php" />
+
+<div class="responsivetable">
+    <table class="table_results data ajax" data-uniqueId="1366669617">
+<thead><tr>
+<th class="column_action print_ignore"  colspan="4"><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=&amp;full_text_button=1&amp;pftext=F"><img class="fulltext" src="./themes/pmahomme/img/s_fulltext.png" alt="Volledige teksten" title="Volledige teksten" /></a></th><th class="draggable right column_heading pointer marker" data-column="pk_product"><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60pk_product%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">pk_product<input type="hidden" value="sql.php?db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60pk_product%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" /></a></th><th class="draggable column_heading pointer marker" data-column="merk"><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60merk%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">merk<input type="hidden" value="sql.php?db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60merk%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" /></a></th><th class="draggable column_heading pointer marker" data-column="model"><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60model%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">model<input type="hidden" value="sql.php?db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60model%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" /></a></th><th class="draggable right column_heading pointer marker" data-column="prijs"><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60prijs%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">prijs<input type="hidden" value="sql.php?db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60prijs%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" /></a></th><th class="draggable right column_heading pointer marker" data-column="korting"><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60korting%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">korting<input type="hidden" value="sql.php?db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60korting%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" /></a></th><th class="draggable right column_heading pointer marker" data-column="aantal"><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60aantal%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">aantal<input type="hidden" value="sql.php?db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60aantal%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" /></a></th><th class="draggable column_heading pointer marker" data-column="img"><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60img%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">img<input type="hidden" value="sql.php?db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60img%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" /></a></th><th class="draggable right column_heading pointer marker" data-column="display"><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60display%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">display<input type="hidden" value="sql.php?db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60display%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" /></a></th><th class="draggable right column_heading pointer marker" data-column="discount"><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60discount%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">discount<input type="hidden" value="sql.php?db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60discount%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" /></a></th><th class="draggable right column_heading pointer marker" data-column="highlight"><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60highlight%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" class="sortlink">highlight<input type="hidden" value="sql.php?db=webshop&amp;table=t_products&amp;sql_query=SELECT+%2A+FROM+%60t_products%60++%0AORDER+BY+%60t_products%60.%60highlight%60+ASC&amp;session_max_rows=25&amp;is_browse_distinct=0" /></a></th></tr></thead><tbody>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete0_left" name="rows_to_delete[0]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 1"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 1&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+1&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 1" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+1&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 1" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+1&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 1</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="string" data-originallength="4" class="data grid_edit click2 not_null   text ">Nike</td>
+<td data-decimals="0" data-type="string" data-originallength="18" class="data grid_edit click2 not_null   text "> Air Force One Low</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">100</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2      nowrap">90</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">6</td>
+<td data-decimals="0" data-type="string" data-originallength="38" class="data grid_edit click2 not_null   text ">Nike-Air-Force-1-Low-White-Product.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete1_left" name="rows_to_delete[1]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 2"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 2&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+2&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 2" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+2&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 2" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+2&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 2</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">2</td>
+<td data-decimals="0" data-type="string" data-originallength="16" class="data grid_edit click2 not_null   text ">Nike X Off White</td>
+<td data-decimals="0" data-type="string" data-originallength="17" class="data grid_edit click2 not_null   text ">Air Force One Low</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1052</td>
+<td 
+    data-decimals="0"
+    data-type="int"
+        class="right data grid_edit click2      null">
+    <em>NULL</em>
+</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">3</td>
+<td data-decimals="0" data-type="string" data-originallength="42" class="data grid_edit click2 not_null   text ">Nike-Air-Force-1-Low-Off-White-Product.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete2_left" name="rows_to_delete[2]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 3"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 3&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+3&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 3" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+3&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 3" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+3&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 3</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">3</td>
+<td data-decimals="0" data-type="string" data-originallength="4" class="data grid_edit click2 not_null   text ">Nike</td>
+<td data-decimals="0" data-type="string" data-originallength="10" class="data grid_edit click2 not_null   text ">Air Jordan</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">110</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2      nowrap">100</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">16</td>
+<td data-decimals="0" data-type="string" data-originallength="41" class="data grid_edit click2 not_null   text ">Air-Jordan-1-Mid-Triple-White-Product.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete3_left" name="rows_to_delete[3]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 4"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 4&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+4&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 4" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+4&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 4" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+4&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 4</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="4" class="data grid_edit click2 not_null   text ">Nike</td>
+<td data-decimals="0" data-type="string" data-originallength="23" class="data grid_edit click2 not_null   text ">Air Jordan Origin Story</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">225</td>
+<td 
+    data-decimals="0"
+    data-type="int"
+        class="right data grid_edit click2      null">
+    <em>NULL</em>
+</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="42" class="data grid_edit click2 not_null   text ">Air-Jordan-1-Retro-High-Origin-Story-1.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete4_left" name="rows_to_delete[4]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 5"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 5&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+5&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 5" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+5&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 5" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+5&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 5</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">5</td>
+<td data-decimals="0" data-type="string" data-originallength="16" class="data grid_edit click2 not_null   text ">Nike X Off White</td>
+<td data-decimals="0" data-type="string" data-originallength="7" class="data grid_edit click2 not_null   text ">Chicago</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">2201</td>
+<td 
+    data-decimals="0"
+    data-type="int"
+        class="right data grid_edit click2      null">
+    <em>NULL</em>
+</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="53" class="data grid_edit click2 not_null   text  truncated">Air-Jordan-1-Retro-High-Off-White-Chicago-Product....</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete5_left" name="rows_to_delete[5]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 6"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 6&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+6&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 6" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+6&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 6" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+6&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 6</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">6</td>
+<td data-decimals="0" data-type="string" data-originallength="6" class="data grid_edit click2 not_null   text ">Adidas</td>
+<td data-decimals="0" data-type="string" data-originallength="24" class="data grid_edit click2 not_null   text ">Yeezy Boost 350 V2 Cream</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">280</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2      nowrap">250</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="45" class="data grid_edit click2 not_null   text ">Adidas-Yeezy-Boost-350-V2-Cream-White-1-1.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete6_left" name="rows_to_delete[6]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 7"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 7&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+7&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 7" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+7&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 7" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+7&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 7</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">7</td>
+<td data-decimals="0" data-type="string" data-originallength="6" class="data grid_edit click2 not_null   text ">Adidas</td>
+<td data-decimals="0" data-type="string" data-originallength="15" class="data grid_edit click2 not_null   text ">Ultra Boost 4.0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">100</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2      nowrap">90</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="48" class="data grid_edit click2 not_null   text ">Adidas-Ultra-Boost-4-0-Running-White-Product.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete7_left" name="rows_to_delete[7]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 8"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 8&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+8&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 8" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+8&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 8" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+8&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 8</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">8</td>
+<td data-decimals="0" data-type="string" data-originallength="6" class="data grid_edit click2 not_null   text ">Adidas</td>
+<td data-decimals="0" data-type="string" data-originallength="6" class="data grid_edit click2 not_null   text ">NMD R2</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">200</td>
+<td 
+    data-decimals="0"
+    data-type="int"
+        class="right data grid_edit click2      null">
+    <em>NULL</em>
+</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="30" class="data grid_edit click2 not_null   text ">adidas-NMD-R2-Triple-White.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete8_left" name="rows_to_delete[8]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 9"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 9&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+9&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 9" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+9&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 9" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+9&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 9</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">9</td>
+<td data-decimals="0" data-type="string" data-originallength="4" class="data grid_edit click2 not_null   text ">Nike</td>
+<td data-decimals="0" data-type="string" data-originallength="10" class="data grid_edit click2 not_null   text ">Air Presto</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">65</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2      nowrap">50</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="40" class="data grid_edit click2 not_null   text ">Nike-Air-Presto-Triple-White-Product.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete9_left" name="rows_to_delete[9]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 10"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 10&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+10&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 10" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+10&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 10" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+10&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 10</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">10</td>
+<td data-decimals="0" data-type="string" data-originallength="6" class="data grid_edit click2 not_null   text ">Adidas</td>
+<td data-decimals="0" data-type="string" data-originallength="10" class="data grid_edit click2 not_null   text ">Stan Smith</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">120</td>
+<td 
+    data-decimals="0"
+    data-type="int"
+        class="right data grid_edit click2      null">
+    <em>NULL</em>
+</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="44" class="data grid_edit click2 not_null   text ">Adidas-Stan-Smith-Primeknit-Triple-White.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete10_left" name="rows_to_delete[10]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 11"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 11&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+11&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 11" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+11&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 11" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+11&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 11</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">11</td>
+<td data-decimals="0" data-type="string" data-originallength="4" class="data grid_edit click2 not_null   text ">Nike</td>
+<td data-decimals="0" data-type="string" data-originallength="8" class="data grid_edit click2 not_null   text ">VaporMax</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">220</td>
+<td 
+    data-decimals="0"
+    data-type="int"
+        class="right data grid_edit click2      null">
+    <em>NULL</em>
+</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="34" class="data grid_edit click2 not_null   text ">Nike-Air-VaporMax-Triple-White.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete11_left" name="rows_to_delete[11]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 12"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 12&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+12&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 12" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+12&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 12" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+12&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 12</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">12</td>
+<td data-decimals="0" data-type="string" data-originallength="3" class="data grid_edit click2 not_null   text ">Air</td>
+<td data-decimals="0" data-type="string" data-originallength="14" class="data grid_edit click2 not_null   text ">Huarache Drift</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">80</td>
+<td 
+    data-decimals="0"
+    data-type="int"
+        class="right data grid_edit click2      null">
+    <em>NULL</em>
+</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="40" class="data grid_edit click2 not_null   text ">Nike-Air-Huarache-Drift-Triple-White.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete12_left" name="rows_to_delete[12]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 15"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 15&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+15&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 15" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+15&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 15" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+15&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 15</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">15</td>
+<td data-decimals="0" data-type="string" data-originallength="4" class="data grid_edit click2 not_null   text ">Nike</td>
+<td data-decimals="0" data-type="string" data-originallength="14" class="data grid_edit click2 not_null   text ">Air Force 1 SF</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">185</td>
+<td 
+    data-decimals="0"
+    data-type="int"
+        class="right data grid_edit click2      null">
+    <em>NULL</em>
+</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="41" class="data grid_edit click2 not_null   text ">Nike-SF-Air-Force-1-All-White-Complex.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete13_left" name="rows_to_delete[13]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 14"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 14&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+14&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 14" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+14&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 14" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+14&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 14</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">14</td>
+<td data-decimals="0" data-type="string" data-originallength="4" class="data grid_edit click2 not_null   text ">Nike</td>
+<td data-decimals="0" data-type="string" data-originallength="19" class="data grid_edit click2 not_null   text ">Air Force 1 Flyknit</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">135</td>
+<td 
+    data-decimals="0"
+    data-type="int"
+        class="right data grid_edit click2      null">
+    <em>NULL</em>
+</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="51" class="data grid_edit click2 not_null   text  truncated">Nike-Air-Force-1-Ultra-Flyknit-Mid-Triple-White.jp...</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete14_left" name="rows_to_delete[14]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 16"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 16&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+16&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 16" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+16&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 16" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+16&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 16</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">16</td>
+<td data-decimals="0" data-type="string" data-originallength="9" class="data grid_edit click2 not_null   text ">Off White</td>
+<td data-decimals="0" data-type="string" data-originallength="15" class="data grid_edit click2 not_null   text ">Industrial Belt</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">165</td>
+<td 
+    data-decimals="0"
+    data-type="int"
+        class="right data grid_edit click2      null">
+    <em>NULL</em>
+</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="24" class="data grid_edit click2 not_null   text ">Air-Jordan-Vote-Back.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete15_left" name="rows_to_delete[15]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 17"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 17&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+17&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 17" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+17&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 17" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+17&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 17</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">17</td>
+<td data-decimals="0" data-type="string" data-originallength="4" class="data grid_edit click2 not_null   text ">Merk</td>
+<td data-decimals="0" data-type="string" data-originallength="5" class="data grid_edit click2 not_null   text ">Model</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td 
+    data-decimals="0"
+    data-type="int"
+        class="right data grid_edit click2      null">
+    <em>NULL</em>
+</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="24" class="data grid_edit click2 not_null   text ">Air-Jordan-Vote-Back.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete16_left" name="rows_to_delete[16]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 18"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 18&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+18&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 18" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+18&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 18" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+18&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 18</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">18</td>
+<td data-decimals="0" data-type="string" data-originallength="4" class="data grid_edit click2 not_null   text ">Merk</td>
+<td data-decimals="0" data-type="string" data-originallength="5" class="data grid_edit click2 not_null   text ">Model</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td 
+    data-decimals="0"
+    data-type="int"
+        class="right data grid_edit click2      null">
+    <em>NULL</em>
+</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="24" class="data grid_edit click2 not_null   text ">Air-Jordan-Vote-Back.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+<tr   ><td  class="center print_ignore"><input type="checkbox" id="id_rows_to_delete17_left" name="rows_to_delete[17]" class="multi_checkbox checkall" value="`t_products`.`pk_product` = 19"  /><input type="hidden" class="condition_array" value="{&quot;`t_products`.`pk_product`&quot;:&quot;= 19&quot;}" />    </td><td class="edit_row_anchor center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+19&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=update"><span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></a><input type="hidden" class="where_clause" value ="`t_products`.`pk_product` = 19" /></span></td><td class="center print_ignore"  ><span class="nowrap"><a href="tbl_change.php" data-post="db=webshop&amp;table=t_products&amp;where_clause=%60t_products%60.%60pk_product%60+%3D+19&amp;clause_is_unique=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;goto=sql.php&amp;default_action=insert"><span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></a><input type="hidden" class="where_clause" value="`t_products`.`pk_product` = 19" /></span></td><td class="center print_ignore"  ><a href="sql.php" data-post="db=webshop&amp;table=t_products&amp;sql_query=DELETE+FROM+%60t_products%60+WHERE+%60t_products%60.%60pk_product%60+%3D+19&amp;message_to_show=De+rij+is+verwijderd.&amp;goto=sql.php%3Fdb%3Dwebshop%26table%3Dt_products%26sql_query%3DSELECT%2B%252A%2BFROM%2B%2560t_products%2560%26message_to_show%3DDe%2Brij%2Bis%2Bverwijderd.%26goto%3Dtbl_sql.php" class="delete_row requireConfirm"><span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></a><div class="hide">DELETE FROM `t_products` WHERE `t_products`.`pk_product` = 19</div></td><td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">19</td>
+<td data-decimals="0" data-type="string" data-originallength="4" class="data grid_edit click2 not_null   text ">Merk</td>
+<td data-decimals="0" data-type="string" data-originallength="5" class="data grid_edit click2 not_null   text ">Model</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td 
+    data-decimals="0"
+    data-type="int"
+        class="right data grid_edit click2      null">
+    <em>NULL</em>
+</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">4</td>
+<td data-decimals="0" data-type="string" data-originallength="24" class="data grid_edit click2 not_null   text ">Air-Jordan-Vote-Back.jpg</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">1</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+<td data-decimals="0" data-type="int" class="right data grid_edit click2 not_null     nowrap">0</td>
+</tr>
+</tbody>
+</table></div><div class="print_ignore" ><img class="selectallarrow" width="38" height="22" src="./themes/pmahomme/img/arrow_ltr.png" alt="Met geselecteerde:" /><input type="checkbox" id="resultsForm_1366669617_checkall" class="checkall_box" title="Selecteer alles" /> <label for="resultsForm_1366669617_checkall">Selecteer alles</label> <i style="margin-left: 2em">Met geselecteerde:</i>
+<button class="mult_submit" type="submit" name="submit_mult" value="edit" title="Wijzigen">
+<span class="nowrap"><img src="themes/dot.gif" title="Wijzigen" alt="Wijzigen" class="icon ic_b_edit" />&nbsp;Wijzigen</span></button>
+<button class="mult_submit" type="submit" name="submit_mult" value="copy" title="Kopiëren">
+<span class="nowrap"><img src="themes/dot.gif" title="Kopiëren" alt="Kopiëren" class="icon ic_b_insrow" />&nbsp;Kopiëren</span></button>
+<button class="mult_submit" type="submit" name="submit_mult" value="delete" title="Verwijderen">
+<span class="nowrap"><img src="themes/dot.gif" title="Verwijderen" alt="Verwijderen" class="icon ic_b_drop" />&nbsp;Verwijderen</span></button>
+<button class="mult_submit" type="submit" name="submit_mult" value="export" title="Exporteren">
+<span class="nowrap"><img src="themes/dot.gif" title="Exporteren" alt="Exporteren" class="icon ic_b_tblexport" />&nbsp;Exporteren</span></button>
+</div>
+<input type="hidden" name="sql_query" value="SELECT * FROM `t_products`" />
+<input type="hidden" name="clause_is_unique" value="1" />
+</form>
+<br />
+<table class="navigation nospacing nopadding print_ignore"><tr><td class="navigation_separator"></td><td>
+    <form action="sql.php" method="post">
+        <input type="hidden" name="db" value="webshop" /><input type="hidden" name="table" value="t_products" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" />
+        <input type="hidden" name="sql_query" value="SELECT * FROM `t_products`" />
+        <input type="hidden" name="pos" value="0" />
+        <input type="hidden" name="is_browse_distinct" value="" />
+        <input type="hidden" name="session_max_rows" value="all" />
+        <input type="hidden" name="goto" value="" />
+        <input type="checkbox" name="navig" id="showAll_1366669617" class="showAllRows" value="all" />
+        <label for="showAll_1366669617">Toon alles</label>
+    </form>
+</td>
+<td><div class="navigation_separator">|</div></td><td><div class="save_edited hide"><input type="submit" value="Sla aangepaste gegevens op" /><div class="navigation_separator">|</div></div></td><td><div class="restore_column hide"><input type="submit" value="Kolomvolgorde herstellen" /><div class="navigation_separator">|</div></div></td><td class="navigation_goto"><form action="sql.php" method="post" onsubmit="return (checkFormElementInRange(this, 'session_max_rows', '%d is geen geldig rijnummer.', 1) &amp;&amp; checkFormElementInRange(this, 'pos', '%d is geen geldig rijnummer.', 0, 17))"><input type="hidden" name="db" value="webshop" /><input type="hidden" name="table" value="t_products" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" /><input type="hidden" name="sql_query" value="SELECT * FROM `t_products`" />
+<input type="hidden" name="goto" value="" />
+<input type="hidden" name="pos" size="3" value="0" />
+<input type="hidden" name="is_browse_distinct" value="" />
+Aantal rijen:<select name="session_max_rows" class="autosubmit">
+<option value="25" selected="selected">25</option>
+<option value="50">50</option>
+<option value="100">100</option>
+<option value="250">250</option>
+<option value="500">500</option>
+</select>
+
+</form></td><td class="navigation_separator"></td><td class="largescreenonly"><span>Filter rijen:</span><input type="text" class="filter_rows" placeholder="Zoek in deze tabel" data-for="1366669617" /></td><td class="largescreenonly"><form action="sql.php" method="post" class="print_ignore">
+<input type="hidden" name="db" value="webshop" /><input type="hidden" name="table" value="t_products" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" /><input type="hidden" name="sort_by_key" value="1" /><input type="hidden" name="token" value="uF&quot;)b;&lt;3dmfRY.@g" />Sorteren op sleutel: <select name="sql_query" class="autosubmit">
+<option value="SELECT * FROM `t_products`  
+ ORDER BY `pk_product` ASC">PRIMARY (ASC)</option><option value="SELECT * FROM `t_products`  
+ ORDER BY `pk_product` DESC">PRIMARY (DESC)</option><option value="SELECT * FROM `t_products`  " selected="selected">Geen</option></select>
+</form>
+</td><td class="navigation_separator"></td></tr></table><fieldset class="print_ignore" ><legend>Handelingen voor queryresultaat</legend><a href="#" id="printView" target="print_view"><span class="nowrap"><img src="themes/dot.gif" title="Afdrukken" alt="Afdrukken" class="icon ic_b_print" />&nbsp;Afdrukken</span></a><a href="#" id="copyToClipBoard"><span class="nowrap"><img src="themes/dot.gif" title="Kopieer naar klembord" alt="Kopieer naar klembord" class="icon ic_b_insrow" />&nbsp;Kopieer naar klembord</span></a><a href="tbl_export.php" data-post="db=webshop&amp;table=t_products&amp;printview=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;single_table=true&amp;unlim_num_rows=18"><span class="nowrap"><img src="themes/dot.gif" title="Exporteren" alt="Exporteren" class="icon ic_b_tblexport" />&nbsp;Exporteren</span></a>
+<a href="tbl_chart.php" data-post="db=webshop&amp;table=t_products&amp;printview=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60&amp;single_table=true&amp;unlim_num_rows=18"><span class="nowrap"><img src="themes/dot.gif" title="Grafiek weergeven" alt="Grafiek weergeven" class="icon ic_b_chart" />&nbsp;Grafiek weergeven</span></a>
+<span><a href="view_create.php?db=webshop" data-post="db=webshop&amp;table=t_products&amp;printview=1&amp;sql_query=SELECT+%2A+FROM+%60t_products%60" class="create_view ajax"><span class="nowrap"><img src="themes/dot.gif" title="VIEW aanmaken" alt="VIEW aanmaken" class="icon ic_b_view_add" />&nbsp;VIEW aanmaken</span></a></span>
+</fieldset><br /></div></div><div id="selflink" class="print_ignore"><a href="sql.php?db=webshop&amp;table=t_products&amp;server=1&amp;target=" title="Nieuw phpMyAdmin-scherm openen" target="_blank" rel="noopener noreferrer"><img src="themes/dot.gif" title="Nieuw phpMyAdmin-scherm openen" alt="Nieuw phpMyAdmin-scherm openen" class="icon ic_window-new" /></a></div><div class="clearfloat" id="pma_errors"></div><script data-cfasync="false" type="text/javascript">// <![CDATA[
+var debugSQLInfo = 'null';
+AJAX.scriptHandler;
+$(function() {});
+// ]]></script></body></html>

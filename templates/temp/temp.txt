@@ -1,0 +1,30 @@
+<div class="content-container" style="margin-top: 0px;">
+
+    <div class="tile one-imp">
+        <div class="intro-text tile-product-item">
+            <div class="url">
+                <h3><span><a href="{$base_url}products">back  |home/products/</a></span> {$product->merk} {$product->model}</h3>
+            </div>
+            <img class="product_item" src="../../images/{$product->img}" alt="">
+        </div>
+
+        <div class="intro-text tile-product-item-right">
+
+            <form method="post">
+                <input class="button-aankoop" type="submit" name="aankoop" value="bestellen!">
+            </form>
+
+            <!---<button class="button-aankoop" onclick="openNav()"> Bestellen! </button>-->
+        </div>
+    </div>
+</div>
+
+{literal}
+<script type="text/javascript">
+    (function($) {
+        $(document).ready(function(){
+            $('.header-nav--wrapper').fadeIn(500);
+        });
+    })(jQuery);
+</script>
+{/literal}

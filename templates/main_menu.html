@@ -1,0 +1,22 @@
+<div class="header-nav--div">
+    <ul class="header-nav--list">
+        <li class="header-nav--list_item"><a href="{$base_url}">Home</a></li>
+        <li class="header-nav--list_item"><a href="{$base_url}products">Products</a></li>
+        <li class="header-nav--list_item"><a href="{$base_url}contact">Contact</a></li>
+        {if isset($admin)}
+        <li class="header-nav--list_item"><a href="{$base_url}admin">Admin</a></li>
+        {/if}
+    </ul>
+
+    <ul class="header-nav--login-list">
+        {if $is_loggedin}
+            {if {$url[0]} == profile}
+                <li class="header-nav--list_item header-nav--list_login"><a href="{$base_url}uitloggen"><i class="fas fa-sign-out-alt"></i> logout</a></li>
+            {else}
+                <li class="header-nav--list_item header-nav--list_login"><a href="{$base_url}profile"><i class="fas fa-user"></i> Profile</a></li>
+            {/if}
+        {else}
+            <li class="header-nav--list_item header-nav--list_login"><a href="{$base_url}inloggen"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        {/if}
+    </ul>
+</div>

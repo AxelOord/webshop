@@ -1,0 +1,102 @@
+<div class="banner-container parallax">
+    <div class="text-intro">
+        <h1>Only for everyone</h1>
+        <p>A retro attitude mixed with a timeless design. The Continental 80 is in store now.</p>
+    </div>
+</div>
+
+<div class="content-container">
+    <div class="scroll-down-container">
+        <div class="arrow">
+            <i class="bt-down"></i>
+        </div>
+    </div>
+
+    <div class="tile intro">
+        <div class="intro-text">
+            <h2>About Us</h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis expedita fugit nihil. Accusantium animi at earum laborum optio perspiciatis.</p>
+        </div>
+    </div>
+
+    <div class="tile two">
+        <div class="overlay">
+            <div class="intro-text white" style="margin-top: 12%;">
+                <a href="{$base_url}products" class="btn btn--white btn--animated"> Go to shop </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="tile three">
+        <div class="intro-text margin-bottom-25">
+            <h2>Discounted</h2>
+        </div>
+
+        <div class="product_container">
+            <div class="product">
+                <section class="products">
+                    {foreach from=$products item=foo}
+                        <div class="product-card">
+                            <a href="{$base_url}products/item/{$foo->pk_product}">
+                                <div class="cr cr-top cr-left cr-sticky cr-red">Sale!</div>
+                                <div class="product-image">
+                                    <img src="images/{$foo->img}">
+                                </div>
+                                <div class="product-info">
+                                    <h5>{$foo->merk} {$foo->model}</h5>
+                                    <h6><span style="text-decoration: line-through;">€ {$foo->prijs},-</span><br />€ {$foo->korting},-</h6>
+                                </div>
+                            </a>
+                        </div>
+                    {/foreach}
+
+                </section>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{literal}
+<script type="text/javascript">
+    $(".arrow").click(function() {
+        $('html,body').animate({
+                scrollTop: $(".content-container").offset().top},
+            'slow');
+    });
+
+    (function($) {
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 444) {
+                    $(".header-nav--wrapper").css('background-color', 'white');
+                } else {
+                    $(".header-nav--wrapper").css('background-color', 'transparent');
+                }
+            });
+        });
+    })(jQuery);
+
+    $(window).scroll(function(e) {
+        parallax();
+    })
+
+
+    function parallax() {
+        var scroll = $(window).scrollTop();
+        var screenHeight = $(window).height();
+
+        $('.parallax').each(function() {
+            var offset = $(this).offset().top;
+            var distanceFromBottom = offset - scroll - screenHeight
+
+            if (offset > screenHeight && offset) {
+                $(this).css('background-position', '-120 ' + (( distanceFromBottom  ) * 0.5 - 90) +'px');
+            } else {
+                $(this).css('background-position', '-120 ' + (( -scroll ) * 0.5 - 90) + 'px');
+            }
+        })
+    }
+</script>
+{/literal}
